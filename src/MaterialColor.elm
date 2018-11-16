@@ -129,14 +129,24 @@ module MaterialColor exposing
 -}
 
 
+{-| Record to hold RGB data as Int fields
+-}
 type alias Rgb255 =
     { red : Int, green : Int, blue : Int }
 
 
+{-| Rgb255 constructor helper
+-}
+rgb255 : Int -> Int -> Int -> Rgb255
 rgb255 =
     Rgb255
 
 
+{-| Converts Rgb255 record into a string
+
+    MaterialColor.blue100 |> MaterialColor.toRgbString == "rgb(187,222,251)"
+
+-}
 toRgbString : Rgb255 -> String
 toRgbString { red, green, blue } =
     [ red, green, blue ]
