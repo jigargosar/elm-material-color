@@ -1,5 +1,6 @@
 module MaterialColor exposing
-    ( red50, red100, red200, red300, red400, red500, red600, red700, red800, red900, redA100, redA200, redA400, redA700
+    ( Rgb255, rgb255, toRgbString
+    , red50, red100, red200, red300, red400, red500, red600, red700, red800, red900, redA100, redA200, redA400, redA700
     , pink50, pink100, pink200, pink300, pink400, pink500, pink600, pink700, pink800, pink900, pinkA100, pinkA200, pinkA400, pinkA700
     , purple50, purple100, purple200, purple300, purple400, purple500, purple600, purple700, purple800, purple900, purpleA100, purpleA200, purpleA400, purpleA700
     , deepPurple50, deepPurple100, deepPurple200, deepPurple300, deepPurple400, deepPurple500, deepPurple600, deepPurple700, deepPurple800, deepPurple900, deepPurpleA100, deepPurpleA200, deepPurpleA400, deepPurpleA700
@@ -18,10 +19,14 @@ module MaterialColor exposing
     , brown50, brown100, brown200, brown300, brown400, brown500, brown600, brown700, brown800, brown900
     , grey50, grey100, grey200, grey300, grey400, grey500, grey600, grey700, grey800, grey900
     , blueGrey50, blueGrey100, blueGrey200, blueGrey300, blueGrey400, blueGrey500, blueGrey600, blueGrey700, blueGrey800, blueGrey900
-    , Rgb255, rgb255, toRgbString
     )
 
 {-| This library allow to get Material colors as Elm
+
+
+# Helpers
+
+@docs Rgb255, rgb255, toRgbString
 
 
 # Colors
