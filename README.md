@@ -1,9 +1,23 @@
 # elm-material-color
 
-    Note: This is fork of "jpagex/elm-material-color" upgraded for elm 0.19
+Material colors as RGB records
 
-This library allow to get Material colors as Elm Color.
+This is `Elm 0.19` compatible __fork__ of "jpagex/elm-material-color"
 
-## Installation
 
-Run `elm-package install jigargosar/elm-material-color`.
+## Example
+
+```elm
+import MaterialColor as MC
+import Html exposing (Html)
+import Html.Attributes exposing (style)
+
+view : Html msg
+view =
+    Html.div
+        [ style "background-color" (MC.toRgbString MC.red50)
+        , style "color" (MC.toRgbString MC.pink600)
+        , style "border-color" (MC.toRgbString MC.purple900)
+        ]
+        [ Html.text "(ᵔᴥᵔ)" ]
+```

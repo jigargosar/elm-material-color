@@ -18,7 +18,7 @@ module MaterialColor exposing
     , brown50, brown100, brown200, brown300, brown400, brown500, brown600, brown700, brown800, brown900
     , grey50, grey100, grey200, grey300, grey400, grey500, grey600, grey700, grey800, grey900
     , blueGrey50, blueGrey100, blueGrey200, blueGrey300, blueGrey400, blueGrey500, blueGrey600, blueGrey700, blueGrey800, blueGrey900
-    , Rgb255, rgb255
+    , Rgb255, rgb255, toRgbString
     )
 
 {-| This library allow to get Material colors as Elm
@@ -130,6 +130,18 @@ type alias Rgb255 =
 
 rgb255 =
     Rgb255
+
+
+toRgbString : Rgb255 -> String
+toRgbString { red, green, blue } =
+    [ red, green, blue ]
+        |> List.map String.fromInt
+        |> String.join ","
+        |> surround "rgb(" ")"
+
+
+surround prefix suffix string =
+    prefix ++ string ++ suffix
 
 
 
